@@ -28,7 +28,6 @@
     chuck
     miniaudicle
     php
-    gitkraken
 
     # python
     python3
@@ -47,7 +46,7 @@
     # services
     spotify
     vlc
-    zotero
+    zotero_7
 
     # editor
     vscode.fhs

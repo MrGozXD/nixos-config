@@ -12,13 +12,8 @@
       ./modules/bundle.nix
     ];
 
-  # Bootloader.
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.enable=true;
-  boot.loader.grub.devices=["nodev"];
-  boot.loader.grub.efiSupport=true;
-  boot.loader.grub.useOSProber=true;
-
+  
+  
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -54,6 +49,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  
 
   # Configure keymap in X11
   services.xserver = {
@@ -70,40 +66,12 @@
   # Enable numlock for display manager/login screen
   services.xserver.displayManager.setupCommands = ''${pkgs.numlockx}/bin/numlockx on'';
 
-  # Enable sound with pipewire.
-  # sound.enable = true; https://github.com/NixOS/nixpkgs/blob/3eeff54780a1a8c73c82ca51987962b62bd4219e/nixos/doc/manual/release-notes/rl-2411.section.md#sound-options-removal-sec-release-2411-migration-sound
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
+  
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  
-  #users.users.mrgozxd = {
-  #  isNormalUser = true;
-  #  description = "Mr Goz XD";
-  #  extraGroups = [ "networkmanager" "wheel" ];
-  #  packages = with pkgs; [
-  #    firefox
-  #    vivaldi
-  #  ];
-  #};
-  
-
-  # Allow unfree packages
+# Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
   # Allow UnsupportedSystem : Microsoft Teams
@@ -112,10 +80,10 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  # environment.systemPackages = with pkgs; [ ];
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-  ];
+  
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
