@@ -26,7 +26,7 @@
       g = "git";
       gs = "git status";
       ga = "git add";
-      gc = "git commit";
+      #gc = "git commit";
       gcm = "git commit -m";
       gp = "git push";
       gpl = "git pull";

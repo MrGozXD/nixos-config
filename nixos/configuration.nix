@@ -24,6 +24,8 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.config.permittedInsecurePackages = ["electron-25.9.0"];
   
   # Allow UnsupportedSystem : Microsoft Teams
   nixpkgs.config.allowUnsupportedSystem = true;
@@ -55,8 +57,6 @@
   # Enable the GNOME Desktop Environment.
   #services.xserver.displayManager.gdm.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
-  
-
 
 
   # Configure console keymap
@@ -67,18 +67,9 @@
 
   # Enable numlock for display manager/login screen
   #services.xserver.displayManager.setupCommands = ''${pkgs.numlockx}/bin/numlockx on'';
-
-  
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  
-  # Allow UnsupportedSystem : Microsoft Teams
-  nixpkgs.config.allowUnsupportedSystem = true;
-  
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -116,5 +107,5 @@
 
 
 
-  #nixpkgs.config.permittedInsecurePackages = ["electron-25.9.0"];
+  
 }

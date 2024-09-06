@@ -2,18 +2,32 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      window.opacity = 0.95;
-
+      # Font configuration MesloLGS NF
       font = {
-        size = 13.0;
-        # draw_bold_text_with_bright_colors = true;
         normal = {
-          family = "JetBrains Mono";
+          family = "MesloLGS NF";
+          style = "Regular";
+          size = 10;
+        };
+        bold = {
+          family = "MesloLGS NF";
           style = "Bold";
+          size = 10;
+        };
+        italic = {
+          family = "MesloLGS NF";
+          style = "Italic";
+          size = 10;
+        };
+        boldItalic = {
+          family = "MesloLGS NF";
+          style = "Bold Italic";
+          size = 10;
         };
       };
+      
 
-      colors.primary.background = "#1d2021";
+      
     };
   };
 }
