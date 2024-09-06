@@ -22,6 +22,12 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+  
+  # Allow UnsupportedSystem : Microsoft Teams
+  nixpkgs.config.allowUnsupportedSystem = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -44,18 +50,14 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
   
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "fr";
-    xkbVariant = "oss_nodeadkeys";
-  };
+
 
   # Configure console keymap
   console.keyMap = "fr";
@@ -64,14 +66,14 @@
   services.printing.enable = true;
 
   # Enable numlock for display manager/login screen
-  services.xserver.displayManager.setupCommands = ''${pkgs.numlockx}/bin/numlockx on'';
+  #services.xserver.displayManager.setupCommands = ''${pkgs.numlockx}/bin/numlockx on'';
 
   
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-# Allow unfree packages
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
   # Allow UnsupportedSystem : Microsoft Teams

@@ -13,18 +13,26 @@
       rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
       upd = "nix flake update ${flakeDir}";
       upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
-      
+      gc = "nix-collect-garbage -d";
       hms = "home-manager switch --flake ${flakeDir}";
 
       conf = "nvim ${flakeDir}/nixos/configuration.nix";
       pkgs = "nvim ${flakeDir}/nixos/packages.nix";
 
       ll = "ls -l";
-      v = "nvim";
-      se = "sudoedit";
-      ff = "fastfetch";
+      la = "ls -la";
 
-      test = "echo 'TEST'";
+      # git
+      g = "git";
+      gs = "git status";
+      ga = "git add";
+      gc = "git commit";
+      gcm = "git commit -m";
+      gp = "git push";
+      gpl = "git pull";
+      gco = "git checkout";
+      gb = "git branch";
+      gcl = "git clone";
     };
 
     history.size = 10000;
