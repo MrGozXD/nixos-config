@@ -3,6 +3,7 @@
 
   users = {
     defaultUserShell = pkgs.zsh;
+    #defaultUserTerminal = pkgs.alacritty;
 
     users.mrgozxd = {
       isNormalUser = true;
@@ -14,6 +15,5 @@
       ];
     };
   };
-
   
 }

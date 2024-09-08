@@ -4,5 +4,6 @@
     ./sound.nix
     ./bootloader.nix
     ./xserver.nix
+    ./hyprland.nix
   ];
 }

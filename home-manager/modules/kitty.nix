@@ -1,10 +1,11 @@
+{config,pkgs,lib,...}:
 {
     programs.kitty = {
         enable = true;
-        extraConfig = ''
-            # Set the default window size
-            initial_window_width  = 100;
-            initial_window_height = 40;
-        '';
+        font.name = "MesloLGS NF";
+        settings = {
+            enable_audio_bell = false;
+        };
+        #catppuccin.enable = false;
     };
 }

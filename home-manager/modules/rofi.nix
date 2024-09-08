@@ -4,6 +4,7 @@
     enable = true;
     terminal = "${pkgs.alacritty}/bin/alacritty";
     theme = "theme";
+    
     };
 
     home.file.".config/rofi/theme.rasi".text = ''

@@ -4,6 +4,11 @@
     permittedInsecurePackages = ["electron-25.9.0"];
   };
   
+  fonts.packages = with pkgs;[
+    # meslolgs https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/meslo-lgs-nf
+    meslo-lgs-nf
+  ];
+
   environment.systemPackages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -21,7 +26,7 @@
     # (writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-
+    
     # dev
     nodejs_20
     bun
@@ -42,6 +47,10 @@
     unzip
     unar
     ffmpeg-full
+    swww
+
+    # CLI utils
+    neofetch
 
     # services
     spotify
@@ -52,6 +61,11 @@
     vscode.fhs
     obsidian
     
+    # Wayland stuff
+    xwayland # provides compatibility for native X11 applications
+    wl-clipboard 
+    cliphist
+
     #other
     home-manager
   ];

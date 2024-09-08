@@ -16,9 +16,15 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Fix for hyprland https://github.com/hyprwm/Hyprland/issues/5891
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
+    stylix.url = "github:danth/stylix";
+    # https://github.com/catppuccin/nix
+    catppuccin.url = "github:catppuccin/nix";
   };
   
-  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs: 
+  outputs = {self, nixpkgs, nixpkgs-stable, home-manager, stylix, catppuccin, ... }@inputs: 
   
     let
       system = "x86_64-linux";
@@ -41,7 +47,11 @@
 
     homeConfigurations.mrgozxd = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-      modules = [ ./home-manager/home.nix ];
+      modules = [
+        stylix.homeManagerModules.stylix
+        ./home-manager/home.nix
+        catppuccin.homeManagerModules.catppuccin
+      ];
     };
   };
 }

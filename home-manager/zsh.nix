@@ -2,16 +2,18 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    enableAutosuggestions = true;
-    #autosuggestion.enable = true;
+    #enableAutosuggestions = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+
+    initExtra = "neofetch";
 
     shellAliases =
       let
         flakeDir = "/home/mrgozxd/nixos/.#mrgozxd";
       in {
       rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      upd = "nix flake update ${flakeDir}";
+      #upd = "nix flake update ${flakeDir}";
       upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
       gc = "nix-collect-garbage -d";
       hms = "home-manager switch --flake ${flakeDir}";
