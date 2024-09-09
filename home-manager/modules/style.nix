@@ -1,13 +1,13 @@
 {config,pkgs,lib,...}:
 {
-    catppuccin = {
+    /* catppuccin = {
         enable = true;
         flavor = "mocha";
         accent = "mauve";
         pointerCursor = {
             enable = true;   
         };
-    };
+    }; */
     
 
     gtk = {
@@ -15,7 +15,7 @@
         #cursorTheme.package = pkgs.bibata-cursors;
         #cursorTheme.name = "Bibata-Modern-Ice";
 
-        catppuccin = {
+        /* catppuccin = {
             enable = true;
             flavor = "mocha";
             accent = "mauve";
@@ -24,15 +24,15 @@
                 accent = "mauve";
             };
             tweaks = [];
-        };
+        }; */
 
 
     };
 
     qt = {
         enable = true;
-        style.name = "kvantum";
-        platformTheme.name = "kvantum";
+        #style.name = "kvantum";
+        #platformTheme.name = "kvantum";
         
     };
 }
