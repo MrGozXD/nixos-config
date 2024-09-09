@@ -123,7 +123,7 @@
         "$mainMod, Return, exec, kitty"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, E, exec, dolphin"
+        "$mainMod, E, exec, nautilus"
         "$mainMod, F, togglefloating,"
         "$mainMod, D, exec, wofi --show drun"
         "$mainMod, P, pseudo, # dwindle"
@@ -148,36 +148,36 @@
         "$mainMod CTRL, down,  resizeactive,  0  60"
 
         # Switch workspaces with mainMod + [0-9]
-        "$mainMod, 1, workspace, 1"
-        "$mainMod, 2, workspace, 2"
-        "$mainMod, 3, workspace, 3"
-        "$mainMod, 4, workspace, 4"
-        "$mainMod, 5, workspace, 5"
-        "$mainMod, 6, workspace, 6"
-        "$mainMod, 7, workspace, 7"
-        "$mainMod, 8, workspace, 8"
-        "$mainMod, 9, workspace, 9"
-        "$mainMod, 0, workspace, 10"
+        "$mainMod, ampersand, workspace, 1"
+        "$mainMod, eacute, workspace, 2"
+        "$mainMod, quotedbl, workspace, 3"
+        "$mainMod, apostrophe, workspace, 4"
+        "$mainMod, parenleft, workspace, 5"
+        "$mainMod, minus, workspace, 6"
+        "$mainMod, egrave, workspace, 7"
+        "$mainMod, underscore, workspace, 8"
+        "$mainMod, ccedilla, workspace, 9"
+        "$mainMod, agrave, workspace, 10"
 
         # Move active window to a workspace with mainMod + SHIFT + [0-9]
-        "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
-        "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
-        "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
-        "$mainMod SHIFT, 4, movetoworkspacesilent, 4"
-        "$mainMod SHIFT, 5, movetoworkspacesilent, 5"
-        "$mainMod SHIFT, 6, movetoworkspacesilent, 6"
-        "$mainMod SHIFT, 7, movetoworkspacesilent, 7"
-        "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
-        "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
-        "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+        "$mainMod SHIFT, ampersand, movewindow, 1"
+        "$mainMod SHIFT, eacute, movewindow, 2"
+        "$mainMod SHIFT, quotedbl, movewindow, 3"
+        "$mainMod SHIFT, apostrophe, movewindow, 4"
+        "$mainMod SHIFT, parenleft, movewindow, 5"
+        "$mainMod SHIFT, minus, movewindow, 6"
+        "$mainMod SHIFT, egrave, movewindow, 7"
+        "$mainMod SHIFT, underscore, movewindow, 8"
+        "$mainMod SHIFT, ccedilla, movewindow, 9"
+        "$mainMod SHIFT, agrave, movewindow, 10"
 
         # Scroll through existing workspaces with mainMod + scroll
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-        # Keyboard backlight
-        "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-        "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
+/*         # Keyboard backlight
+        "$mainMod, XF86KbdBrightnessDown, exec, kbdlight down"
+        "$mainMod, XF86KbdBrightnessUp, exec, kbdlight up"
 
         # Volume and Media Control
         ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
@@ -194,7 +194,7 @@
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
         ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
         ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
-        '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
+        '', Print, exec, grim -g "$(slurp)" - | swappy -f -'' */
 
         # Waybar
         "$mainMod, B, exec, pkill -SIGUSR1 waybar"

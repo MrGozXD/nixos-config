@@ -51,11 +51,13 @@
 
     # CLI utils
     neofetch
+    #zsh-powerlevel10k
 
     # services
     spotify
     vlc
     zotero_7
+    vesktop #Discord/BetterDiscord
 
     # editor
     vscode.fhs
@@ -65,6 +67,7 @@
     xwayland # provides compatibility for native X11 applications
     wl-clipboard 
     cliphist
+    
 
     #other
     home-manager

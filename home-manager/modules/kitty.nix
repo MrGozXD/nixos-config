@@ -1,6 +1,6 @@
 {config,pkgs,lib,...}:
 {
-    programs.kitty = {
+    programs.kitty = lib.mkForce {
         enable = true;
         font.name = "MesloLGS NF";
         settings = {

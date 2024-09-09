@@ -5,4 +5,5 @@
   boot.loader.grub.devices=["nodev"];
   boot.loader.grub.efiSupport=true;
   boot.loader.grub.useOSProber=true;
+  #boot.loader.grub.catppuccin.enable=true;
 }

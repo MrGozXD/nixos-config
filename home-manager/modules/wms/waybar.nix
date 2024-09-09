@@ -45,7 +45,7 @@
         return-type = "json";
     };
 
-    "pulseaudio" = {
+    "pipewire" = {
         # scroll-step = 1; # %, can be a float
         reverse-scrolling = 1;
         format = "{volume}% {icon} {format_source}";

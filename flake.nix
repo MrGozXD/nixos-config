@@ -41,7 +41,22 @@
       };
       modules = [
         ./nixos/configuration.nix
+        catppuccin.nixosModules.catppuccin
+        #stylix.nixosModules.stylix
         #inputs.nixvim.nixosModules.nixvim
+        # if you use home-manager
+        home-manager.nixosModules.home-manager
+
+        {
+          # if you use home-manager
+          home-manager.users.mrgozxd = {
+            imports = [
+              ./home-manager/home.nix
+              catppuccin.homeManagerModules.catppuccin
+              #stylix.homeManagerModules.stylix
+            ];
+          };
+        }
       ];
     };
 

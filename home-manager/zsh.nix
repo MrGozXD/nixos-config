@@ -1,11 +1,11 @@
-{ config, ... }: {
+{ config,pkgs, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     #enableAutosuggestions = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-
+    #initExtra = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     initExtra = "neofetch";
 
     shellAliases =
@@ -42,8 +42,8 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo"];
-      theme = "agnoster"; # blinks is also really nice
+      plugins = [ "sudo" ];
+      theme = "agnoster";
       #theme = "blinks";
     };
   };

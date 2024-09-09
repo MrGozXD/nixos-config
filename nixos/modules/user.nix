@@ -1,6 +1,12 @@
 { pkgs, ... }: {
   programs.zsh.enable = true;
 
+  /* stylix = {
+    enable = true;
+    image = /home/mrgozxd/Images/Wallpaper/GigantamaxEctoplasma.png;
+    polarity = "dark";
+  }; */
+
   users = {
     defaultUserShell = pkgs.zsh;
     #defaultUserTerminal = pkgs.alacritty;
