@@ -8,6 +8,6 @@
     ./wofi.nix
     ./wms/hyprland.nix
     ./wms/waybar.nix
-    ./catppuccin.nix
+    ./style.nix
   ];
 }
