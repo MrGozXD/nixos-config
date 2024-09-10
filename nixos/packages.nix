@@ -1,15 +1,15 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [ "electron-25.9.0" ];
     allowUnsupportedSystem = true; # Microsoft Teams
   };
 
-  fonts.packages = with pkgs;
-    [
-      # meslolgs https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/meslo-lgs-nf
-      meslo-lgs-nf
-    ];
+  fonts.packages = with pkgs; [
+    # meslolgs https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/meslo-lgs-nf
+    meslo-lgs-nf
+  ];
 
   environment.systemPackages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
@@ -58,6 +58,8 @@
     # CLI utils
     neofetch
     #zsh-powerlevel10k
+    base16-shell-preview
+    base16-schemes
 
     # services
     spotify
@@ -78,4 +80,3 @@
     home-manager
   ];
 }
-

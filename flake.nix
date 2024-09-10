@@ -22,14 +22,30 @@
     stylix.url = "github:danth/stylix";
     # https://github.com/catppuccin/nix
     catppuccin.url = "github:catppuccin/nix";
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, stylix, catppuccin
-    , ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-stable,
+      home-manager,
+      stylix,
+      catppuccin,
+      spicetify-nix,
+      ...
+    }@inputs:
 
-    let system = "x86_64-linux";
-    in {
-
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { system = system; };
+    in
+    {
       # Please replace my-nixos with your hostname
       nixosConfigurations.mrgozxd = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -46,7 +62,6 @@
           #inputs.nixvim.nixosModules.nixvim
           # if you use home-manager
           home-manager.nixosModules.home-manager
-
           {
             # if you use home-manager
             home-manager.users.mrgozxd = {
@@ -54,6 +69,7 @@
                 ./home-manager/home.nix
                 catppuccin.homeManagerModules.catppuccin
                 stylix.homeManagerModules.stylix
+                #spicetify-nix.homeManagerModules.default
               ];
             };
           }
@@ -61,11 +77,16 @@
       };
 
       homeConfigurations.mrgozxd = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
+        #pkgs = nixpkgs.legacyPackages.${system};
+        inherit pkgs;
+        extraSpecialArgs = {
+          inherit inputs system spicetify-nix;
+        };
         modules = [
           stylix.homeManagerModules.stylix
           ./home-manager/home.nix
           catppuccin.homeManagerModules.catppuccin
+          #spicetify-nix.homeManagerModules.default
         ];
       };
     };

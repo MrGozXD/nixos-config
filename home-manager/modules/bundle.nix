@@ -1,4 +1,10 @@
 {
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
+{
   imports = [
     ./git.nix
     ./zoxide.nix
@@ -9,5 +15,6 @@
     ./wms/hyprland.nix
     ./wms/waybar.nix
     ./style.nix
+    ./spicetify.nix
   ];
 }
