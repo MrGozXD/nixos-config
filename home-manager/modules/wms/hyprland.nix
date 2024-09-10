@@ -1,200 +1,198 @@
 {
-	wayland.windowManager.hyprland = {
-		enable = true;
-		xwayland.enable = true;
+  wayland.windowManager.hyprland = {
+    enable = true;
+    xwayland.enable = true;
 
-		settings = {
-			"$mainMod" = "SUPER";
+    settings = {
+      "$mainMod" = "SUPER";
 
-			monitor = ",1920x1080@144,auto,1";
+      monitor = ",1920x1080@144,auto,1";
 
-			env = [
-				"XDG_CURRENT_DESKTOP,Hyprland"
-				"XDG_SESSION_TYPE,wayland"
-				"XDG_SESSION_DESKTOP,Hyprland"
-				"XCURSOR_SIZE,36"
-				"QT_QPA_PLATFORM,wayland"
-				"XDG_SCREENSHOTS_DIR,~/screens"
-				
-			];
+      env = [
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+        "XCURSOR_SIZE,36"
+        "QT_QPA_PLATFORM,wayland"
+        "XDG_SCREENSHOTS_DIR,~/screens"
 
-			debug = {
-				disable_logs = false;
-				enable_stdout_logs = true;
-			};
+      ];
 
-			input = {
-				kb_layout = "fr";
-				#kb_variant = "lang";
-				#kb_options = "grp:caps_toggle";
+      debug = {
+        disable_logs = false;
+        enable_stdout_logs = true;
+      };
 
-				follow_mouse = 1;
+      input = {
+        kb_layout = "fr";
+        #kb_variant = "lang";
+        #kb_options = "grp:caps_toggle";
 
-				touchpad = {
-				natural_scroll = true;
-				};
+        follow_mouse = 1;
 
-				sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-			};
+        touchpad = { natural_scroll = true; };
 
-			general = {
-					gaps_in = 5;
-					gaps_out = 20;
-					border_size = 3;
-					"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-					#"col.inactive_border" = "rgba(595959aa)";
+        sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+      };
 
-					layout = "dwindle";
+      general = {
+        gaps_in = 5;
+        gaps_out = 20;
+        border_size = 3;
+        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        #"col.inactive_border" = "rgba(595959aa)";
 
-					#no_cursor_warps = false;
-			};
+        layout = "dwindle";
 
-			animations = {
-				enabled = true;
+        #no_cursor_warps = false;
+      };
 
-				bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-				# bezier = "myBezier, 0.33, 0.82, 0.9, -0.08";
+      animations = {
+        enabled = true;
 
-				animation = [
-				"windows,     1, 7,  myBezier"
-				"windowsOut,  1, 7,  default, popin 80%"
-				"border,      1, 10, default"
-				"borderangle, 1, 8,  default"
-				"fade,        1, 7,  default"
-				"workspaces,  1, 6,  default"
-				];
-			};
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        # bezier = "myBezier, 0.33, 0.82, 0.9, -0.08";
 
-			dwindle = {
-				pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-				preserve_split = true; # you probably want this
-			};
+        animation = [
+          "windows,     1, 7,  myBezier"
+          "windowsOut,  1, 7,  default, popin 80%"
+          "border,      1, 10, default"
+          "borderangle, 1, 8,  default"
+          "fade,        1, 7,  default"
+          "workspaces,  1, 6,  default"
+        ];
+      };
 
-			master = {
-				#new_is_master = true;
-			};
+      dwindle = {
+        pseudotile =
+          true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        preserve_split = true; # you probably want this
+      };
 
-			gestures = {
-				workspace_swipe = true;
-				workspace_swipe_fingers = 3;
-				workspace_swipe_invert = false;
-				workspace_swipe_distance = 200;
-				workspace_swipe_forever = true;
-			};
+      master = {
+        #new_is_master = true;
+      };
 
-			misc = {
-				animate_manual_resizes = true;
-				animate_mouse_windowdragging = true;
-				#enable_swallow = true;
-				render_ahead_of_time = false;
-				disable_hyprland_logo = true;
-			};
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+        workspace_swipe_invert = false;
+        workspace_swipe_distance = 200;
+        workspace_swipe_forever = true;
+      };
 
-			windowrule = [
-				"float, ^(imv)$"
-				"float, ^(mpv)$"
-			];
+      misc = {
+        animate_manual_resizes = true;
+        animate_mouse_windowdragging = true;
+        #enable_swallow = true;
+        render_ahead_of_time = false;
+        disable_hyprland_logo = true;
+      };
 
-			exec-once = [
-				"swww init"
-				"swww img /home/mrgozxd/Images/Wallpaper/GigantamaxEctoplasma.png"
-				"waybar"
-				"wl-paste --type text --watch cliphist store"
-				"wl-paste --type image --watch cliphist store"
-			];
+      windowrule = [ "float, ^(imv)$" "float, ^(mpv)$" ];
 
-			bind = [
-				"$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
-				"$mainMod, Return, exec, kitty"
-				"$mainMod, Q, killactive,"
-				"$mainMod, M, exit,"
-				"$mainMod, E, exec, nautilus"
-				"$mainMod, F, togglefloating,"
-				"$mainMod, D, exec, wofi --show drun"
-				"$mainMod, P, pseudo, # dwindle"
-				"$mainMod, J, togglesplit, # dwindle"
+      exec-once = [
+        "swww init"
+        "swww img /home/mrgozxd/Images/Wallpaper/GigantamaxEctoplasma.png"
+        "waybar"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
+      ];
 
-				# Move focus with mainMod + arrow keys
-				"$mainMod, left,  movefocus, l"
-				"$mainMod, right, movefocus, r"
-				"$mainMod, up,    movefocus, u"
-				"$mainMod, down,  movefocus, d"
+      bind = [
+        "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+        "$mainMod, Return, exec, kitty"
+        "$mainMod, Q, killactive,"
+        "$mainMod, M, exit,"
+        "$mainMod, E, exec, nautilus"
+        "$mainMod, F, togglefloating,"
+        "$mainMod, D, exec, wofi --show drun"
+        "$mainMod, P, pseudo, # dwindle"
+        "$mainMod, J, togglesplit, # dwindle"
 
-				# Moving windows
-				"$mainMod SHIFT, left,  swapwindow, l"
-				"$mainMod SHIFT, right, swapwindow, r"
-				"$mainMod SHIFT, up,    swapwindow, u"
-				"$mainMod SHIFT, down,  swapwindow, d"
+        # Move focus with mainMod + arrow keys
+        "$mainMod, left,  movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up,    movefocus, u"
+        "$mainMod, down,  movefocus, d"
 
-				# Window resizing                     X  Y
-				"$mainMod CTRL, left,  resizeactive, -60 0"
-				"$mainMod CTRL, right, resizeactive,  60 0"
-				"$mainMod CTRL, up,    resizeactive,  0 -60"
-				"$mainMod CTRL, down,  resizeactive,  0  60"
+        # Moving windows
+        "$mainMod SHIFT, left,  swapwindow, l"
+        "$mainMod SHIFT, right, swapwindow, r"
+        "$mainMod SHIFT, up,    swapwindow, u"
+        "$mainMod SHIFT, down,  swapwindow, d"
 
-				# Switch workspaces with mainMod + [0-9]
-				"$mainMod, ampersand, workspace, 1"
-				"$mainMod, eacute, workspace, 2"
-				"$mainMod, quotedbl, workspace, 3"
-				"$mainMod, apostrophe, workspace, 4"
-				"$mainMod, parenleft, workspace, 5"
-				"$mainMod, minus, workspace, 6"
-				"$mainMod, egrave, workspace, 7"
-				"$mainMod, underscore, workspace, 8"
-				"$mainMod, ccedilla, workspace, 9"
-				"$mainMod, agrave, workspace, 10"
+        # Window resizing                     X  Y
+        "$mainMod CTRL, left,  resizeactive, -60 0"
+        "$mainMod CTRL, right, resizeactive,  60 0"
+        "$mainMod CTRL, up,    resizeactive,  0 -60"
+        "$mainMod CTRL, down,  resizeactive,  0  60"
 
-				# Move active window to a workspace with mainMod + SHIFT + [0-9]
-				"$mainMod SHIFT, ampersand, movewindow, 1"
-				"$mainMod SHIFT, eacute, movewindow, 2"
-				"$mainMod SHIFT, quotedbl, movewindow, 3"
-				"$mainMod SHIFT, apostrophe, movewindow, 4"
-				"$mainMod SHIFT, parenleft, movewindow, 5"
-				"$mainMod SHIFT, minus, movewindow, 6"
-				"$mainMod SHIFT, egrave, movewindow, 7"
-				"$mainMod SHIFT, underscore, movewindow, 8"
-				"$mainMod SHIFT, ccedilla, movewindow, 9"
-				"$mainMod SHIFT, agrave, movewindow, 10"
+        # Switch workspaces with mainMod + [0-9]
+        "$mainMod, ampersand, workspace, 1"
+        "$mainMod, eacute, workspace, 2"
+        "$mainMod, quotedbl, workspace, 3"
+        "$mainMod, apostrophe, workspace, 4"
+        "$mainMod, parenleft, workspace, 5"
+        "$mainMod, minus, workspace, 6"
+        "$mainMod, egrave, workspace, 7"
+        "$mainMod, underscore, workspace, 8"
+        "$mainMod, ccedilla, workspace, 9"
+        "$mainMod, agrave, workspace, 10"
 
-				# Scroll through existing workspaces with mainMod + scroll
-				"$mainMod, mouse_down, workspace, e+1"
-				"$mainMod, mouse_up, workspace, e-1"
+        # Move active window to a workspace with mainMod + SHIFT + [0-9]
+        "$mainMod SHIFT, ampersand, movewindow, 1"
+        "$mainMod SHIFT, eacute, movewindow, 2"
+        "$mainMod SHIFT, quotedbl, movewindow, 3"
+        "$mainMod SHIFT, apostrophe, movewindow, 4"
+        "$mainMod SHIFT, parenleft, movewindow, 5"
+        "$mainMod SHIFT, minus, movewindow, 6"
+        "$mainMod SHIFT, egrave, movewindow, 7"
+        "$mainMod SHIFT, underscore, movewindow, 8"
+        "$mainMod SHIFT, ccedilla, movewindow, 9"
+        "$mainMod SHIFT, agrave, movewindow, 10"
 
-				# Keyboard backlight
-				/* "$mainMod, XF86KbdBrightnessDown, exec, kbdlight down"
-				"$mainMod, XF86KbdBrightnessUp, exec, kbdlight up" */
-				
+        # Scroll through existing workspaces with mainMod + scroll
+        "$mainMod, mouse_down, workspace, e+1"
+        "$mainMod, mouse_up, workspace, e-1"
 
-				# Volume and Media Control
-				", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-				", XF86AudioLowerVolume, exec, pamixer -d 5 "
-				", XF86AudioMute, exec, pamixer -t"
-				", XF86AudioMicMute, exec, pamixer --default-source -m"
-				
-				# Brightness control
-				", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
-				", XF86MonBrightnessUp, exec, brightnessctl set +5% "
+        # Keyboard backlight
+        /* "$mainMod, XF86KbdBrightnessDown, exec, kbdlight down"
+           				"$mainMod, XF86KbdBrightnessUp, exec, kbdlight up"
+        */
 
-				# Configuration files
-				''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
-				''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-				''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-				''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
-				'', Print, exec, grim -g "$(slurp)" - | swappy -f -'' 
+        # Volume and Media Control
+        ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
+        ", XF86AudioLowerVolume, exec, pamixer -d 5 "
+        ", XF86AudioMute, exec, pamixer -t"
+        ", XF86AudioMicMute, exec, pamixer --default-source -m"
 
-				# Waybar
-				"$mainMod, B, exec, pkill -SIGUSR1 waybar"
-				"$mainMod, W, exec, pkill -SIGUSR2 waybar"
+        # Brightness control
+        ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
+        ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
 
-				# Disable all effects
-				"$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
-			];
+        # Configuration files
+        ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
+        ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
+        ''
+          $mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
+        ''
+          $mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
+        '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
-			# Move/resize windows with mainMod + LMB/RMB and dragging
-			bindm = [
-				"$mainMod, mouse:272, movewindow"
-				"$mainMod, mouse:273, resizewindow"
-			];
-		};
-	};
+        # Waybar
+        "$mainMod, B, exec, pkill -SIGUSR1 waybar"
+        "$mainMod, W, exec, pkill -SIGUSR2 waybar"
+
+        # Disable all effects
+        "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
+      ];
+
+      # Move/resize windows with mainMod + LMB/RMB and dragging
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+      ];
+    };
+  };
 }

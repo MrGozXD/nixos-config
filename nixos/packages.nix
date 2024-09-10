@@ -1,78 +1,81 @@
-{ pkgs, ... }:
-{
-	nixpkgs.config = {
-		allowUnfree = true;
-		permittedInsecurePackages = ["electron-25.9.0"];
-		allowUnsupportedSystem = true; # Microsoft Teams
-	};
-	
-	fonts.packages = with pkgs; [
-		# meslolgs https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/meslo-lgs-nf
-		meslo-lgs-nf
-	];
+{ pkgs, ... }: {
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [ "electron-25.9.0" ];
+    allowUnsupportedSystem = true; # Microsoft Teams
+  };
 
-	environment.systemPackages = with pkgs; [
-		# # Adds the 'hello' command to your environment. It prints a friendly
-		# # "Hello, world!" when run.
-		hello
+  fonts.packages = with pkgs;
+    [
+      # meslolgs https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/meslo-lgs-nf
+      meslo-lgs-nf
+    ];
 
-		# # It is sometimes useful to fine-tune packages, for example, by applying
-		# # overrides. You can do that directly here, just don't forget the
-		# # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-		# # fonts?
-		# (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+  environment.systemPackages = with pkgs; [
+    # # Adds the 'hello' command to your environment. It prints a friendly
+    # # "Hello, world!" when run.
+    hello
 
-		# # You can also create simple shell scripts directly inside your
-		# # configuration. For example, this adds a command 'my-hello' to your
-		# # environment:
-		# (writeShellScriptBin "my-hello" ''
-		#   echo "Hello, ${config.home.username}!"
-		# '')
-		
-		# dev
-		nodejs_20
-		bun
-		chuck
-		miniaudicle
-		php
+    # # It is sometimes useful to fine-tune packages, for example, by applying
+    # # overrides. You can do that directly here, just don't forget the
+    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+    # # fonts?
+    # (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-		# python
-		python3
-		# pip3,pip,pip3.11
-		python311Packages.pip
-		# jupyter
-		python311Packages.ipykernel
+    # # You can also create simple shell scripts directly inside your
+    # # configuration. For example, this adds a command 'my-hello' to your
+    # # environment:
+    # (writeShellScriptBin "my-hello" ''
+    #   echo "Hello, ${config.home.username}!"
+    # '')
 
-		# misc
-		cowsay
-		fortune
-		unzip
-		unar
-		ffmpeg-full
-		swww
+    # dev
+    nodejs_20
+    bun
+    chuck
+    miniaudicle
+    php
 
-		# CLI utils
-		neofetch
-		#zsh-powerlevel10k
+    #lsp
+    nil
+    nixfmt-rfc-style
 
-		# services
-		spotify
-		vlc
-		zotero_7
-		vesktop #Discord/BetterDiscord
+    # python
+    python3
+    # pip3,pip,pip3.11
+    python311Packages.pip
+    # jupyter
+    python311Packages.ipykernel
 
-		# editor
-		vscode.fhs
-		obsidian
-		
-		# Wayland stuff
-		xwayland # provides compatibility for native X11 applications
-		wl-clipboard 
-		cliphist
-		
+    # misc
+    cowsay
+    fortune
+    unzip
+    unar
+    ffmpeg-full
+    swww
 
-		#other
-		home-manager
-	];
+    # CLI utils
+    neofetch
+    #zsh-powerlevel10k
+
+    # services
+    spotify
+    vlc
+    zotero_7
+    vesktop # Discord/BetterDiscord
+
+    # editor
+    vscode.fhs
+    obsidian
+
+    # Wayland stuff
+    xwayland # provides compatibility for native X11 applications
+    wl-clipboard
+    cliphist
+
+    #other
+    home-manager
+  ];
 }
-	
+
