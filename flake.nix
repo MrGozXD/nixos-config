@@ -43,8 +43,8 @@
 
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { system = system; };
     in
+    #pkgs = import nixpkgs { system = system; };
     {
       # Please replace my-nixos with your hostname
       nixosConfigurations.mrgozxd = nixpkgs.lib.nixosSystem {
@@ -61,26 +61,15 @@
           #stylix.nixosModules.stylix
           #inputs.nixvim.nixosModules.nixvim
           # if you use home-manager
-          home-manager.nixosModules.home-manager
-          {
-            # if you use home-manager
-            home-manager.users.mrgozxd = {
-              imports = [
-                ./home-manager/home.nix
-                catppuccin.homeManagerModules.catppuccin
-                stylix.homeManagerModules.stylix
-                #spicetify-nix.homeManagerModules.default
-              ];
-            };
-          }
+
         ];
       };
 
       homeConfigurations.mrgozxd = home-manager.lib.homeManagerConfiguration {
-        #pkgs = nixpkgs.legacyPackages.${system};
-        inherit pkgs;
+        pkgs = nixpkgs.legacyPackages.${system};
+        #inherit pkgs;
         extraSpecialArgs = {
-          inherit inputs system spicetify-nix;
+          inherit inputs system;
         };
         modules = [
           stylix.homeManagerModules.stylix

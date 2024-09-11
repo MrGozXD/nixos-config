@@ -10,7 +10,7 @@ let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
-  imports = [ spicetify-nix.homeManagerModules.default ];
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
   # allow spotify to be installed if you don't have unfree enabled already
   nixpkgs.config.allowUnfreePredicate =
     pkg:
