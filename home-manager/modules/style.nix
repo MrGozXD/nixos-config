@@ -42,22 +42,22 @@
     */
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-terminal-dark.yaml";
     base16Scheme = {
-      base00 = "171D23";
-      base01 = "1D252C";
-      base02 = "28323A";
-      base03 = "526270";
-      base04 = "b0b5cf";
-      base05 = "b0b5cf";
-      base06 = "F6F6F8";
-      base07 = "FBFBFD";
-      base08 = "D95468";
-      base09 = "FF9E64";
-      base0A = "EBBF83";
-      base0B = "8BD49C";
-      base0C = "70E1E8";
-      base0D = "539AFC";
-      base0E = "B62D65";
-      base0F = "DD9D82";
+      base00 = "171D23"; # -- Dark Charcoal
+      base01 = "1D252C"; # -- Dark Slate Grey
+      base02 = "28323A"; # -- Dark Grey
+      base03 = "526270"; # -- Medium Slate Grey
+      base04 = "b0b5cf"; # -- Light Grayish Blue
+      base05 = "b0b5cf"; # -- Light Grayish Blue
+      base06 = "F6F6F8"; # Very Light Grey
+      base07 = "FBFBFD"; # -- White
+      base08 = "D95468"; # -- Light Red
+      base09 = "FF9E64"; # -- Light Orange
+      base0A = "EBBF83"; # -- Light Yellow
+      base0B = "8BD49C"; # -- Light Green
+      base0C = "70E1E8"; # -- Light Cyan
+      base0D = "539AFC"; # -- Light Blue
+      base0E = "B62D65"; # -- Light Magenta
+      base0F = "DD9D82"; # -- Light Brown
     };
 
     targets.hyprland.enable = false; # hyprpaper bug, wait for mix
