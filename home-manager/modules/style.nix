@@ -20,6 +20,11 @@
     enable = true;
     image = /home/mrgozxd/Images/Wallpaper/GigantamaxEctoplasma.png;
     polarity = "dark";
+    opacity = {
+      desktop = 0.5;
+      terminal = 0.5;
+      applications = 0.5;
+    };
     /*
       base16Scheme = {
         base00 = "16161E";
@@ -62,6 +67,7 @@
 
     targets.hyprland.enable = false; # hyprpaper bug, wait for mix
     targets.gtk.enable = true;
+    targets.kitty.enable = true;
 
     autoEnable = true;
 

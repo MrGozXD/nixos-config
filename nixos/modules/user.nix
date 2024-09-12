@@ -1,11 +1,13 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.zsh.enable = true;
 
-  /* stylix = {
-     		enable = true;
-     		image = /home/mrgozxd/Images/Wallpaper/GigantamaxEctoplasma.png;
-     		polarity = "dark";
-     	};
+  /*
+    stylix = {
+    		enable = true;
+    		image = /home/mrgozxd/Images/Wallpaper/GigantamaxEctoplasma.png;
+    		polarity = "dark";
+    	};
   */
 
   users = {
@@ -13,7 +15,12 @@
     users.mrgozxd = {
       isNormalUser = true;
       description = "Mr Goz XD";
-      extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "input"
+        "libvirtd"
+      ];
       packages = with pkgs; [ vivaldi ];
     };
   };

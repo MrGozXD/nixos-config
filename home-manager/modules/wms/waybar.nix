@@ -5,7 +5,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "9 13 -10 18";
+        margin = "0";
 
         modules-left = [
           "hyprland/workspaces"
@@ -13,11 +13,22 @@
           "keyboard-state"
           "hyprland/submap"
         ];
-        modules-center = [ "clock" "custom/weather" ];
-        modules-right =
-          [ "pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray" ];
+        modules-center = [
+          "clock"
+          "custom/weather"
+        ];
+        modules-right = [
+          "pulseaudio"
+          "custom/mem"
+          "cpu"
+          "backlight"
+          "battery"
+          "tray"
+        ];
 
-        "hyprland/workspaces" = { disable-scroll = true; };
+        "hyprland/workspaces" = {
+          disable-scroll = true;
+        };
 
         "hyprland/language" = {
           format-fr = "FR";
@@ -67,7 +78,11 @@
             phone = "";
             portable = "";
             car = "";
-            default = [ "" "" "" ];
+            default = [
+              ""
+              ""
+              ""
+            ];
           };
           on-click = "pavucontrol";
           #min-length = 13;
@@ -92,7 +107,13 @@
           critical-threshold = 80;
           format-critical = "{temperatureC}°C {icon}";
           format = "{temperatureC}°C {icon}";
-          format-icons = [ "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
           tooltip = false;
         };
 
@@ -112,7 +133,18 @@
           format-charging = "{capacity}% ";
           format-plugged = "{capacity}% ";
           format-alt = "{time} {icon}";
-          format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
           on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
         };
 

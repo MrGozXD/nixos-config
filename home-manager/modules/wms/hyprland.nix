@@ -30,19 +30,22 @@
 
         follow_mouse = 1;
 
-        touchpad = { natural_scroll = true; };
+        touchpad = {
+          natural_scroll = true;
+        };
 
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
       };
 
       general = {
-        gaps_in = 5;
-        gaps_out = 20;
-        border_size = 3;
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        #"col.inactive_border" = "rgba(595959aa)";
+        gaps_in = 2;
+        gaps_out = 5;
 
-        layout = "dwindle";
+        border_size = 3;
+        "col.active_border" = "rgba(B62D65FF) rgba(B62D65FF) 45deg ";
+        "col.inactive_border" = "rgba(59595900)";
+
+        layout = "master";
 
         #no_cursor_warps = false;
       };
@@ -64,8 +67,7 @@
       };
 
       dwindle = {
-        pseudotile =
-          true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # you probably want this
       };
 
@@ -89,7 +91,10 @@
         disable_hyprland_logo = true;
       };
 
-      windowrule = [ "float, ^(imv)$" "float, ^(mpv)$" ];
+      windowrule = [
+        "float, ^(imv)$"
+        "float, ^(mpv)$"
+      ];
 
       exec-once = [
         "swww init"
@@ -157,8 +162,9 @@
         "$mainMod, mouse_up, workspace, e-1"
 
         # Keyboard backlight
-        /* "$mainMod, XF86KbdBrightnessDown, exec, kbdlight down"
-           				"$mainMod, XF86KbdBrightnessUp, exec, kbdlight up"
+        /*
+          "$mainMod, XF86KbdBrightnessDown, exec, kbdlight down"
+          				"$mainMod, XF86KbdBrightnessUp, exec, kbdlight up"
         */
 
         # Volume and Media Control
@@ -174,10 +180,8 @@
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''
-          $mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-        ''
-          $mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
+        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
+        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
