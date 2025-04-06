@@ -1,4 +1,6 @@
 { config, pkgs, ... }: {
+  # Enable Wofi as a launcher for applications and a menu for window management.
+  # Use this and not Rofi, as Wofi is more integrated with Wayland.
   programs.wofi = {
     enable = true;
     settings = {

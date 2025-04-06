@@ -11,6 +11,13 @@
     meslo-lgs-nf
   ];
 
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      emoji = [ "NotoColorEmoji" ];
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
