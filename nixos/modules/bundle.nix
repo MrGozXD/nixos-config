@@ -6,5 +6,6 @@
     ./xserver.nix
     ./hyprland.nix
     ./bluetooth.nix
+    ./neovim.nix
   ];
 }

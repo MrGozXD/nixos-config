@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       vim = {  
-        statusline = {
+        statusline.lualine = {
           enable = true;
         };
         telescope = {
