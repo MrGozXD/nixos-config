@@ -12,14 +12,6 @@
       insensitive = true;
       allow-images = true;
     };
-    style =
-    "
-     * {
-        background-color: #201A41;
-        border-radius: 15px;
-        
-        min-height: 20px;
-      }
-    ";
+    
   };
 }
