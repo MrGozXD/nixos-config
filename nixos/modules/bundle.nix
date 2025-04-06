@@ -5,5 +5,6 @@
     ./bootloader.nix
     ./xserver.nix
     ./hyprland.nix
+    ./bluetooth.nix
   ];
 }
