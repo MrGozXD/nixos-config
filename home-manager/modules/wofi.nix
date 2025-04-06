@@ -12,16 +12,14 @@
       insensitive = true;
       allow-images = true;
     };
-    style = {
+    style =
     "
      * {
         background-color: #201A41;
         border-radius: 15px;
-        font-family: JetBrains Mono;
-        font-weight: bold;
+        
         min-height: 20px;
       }
-    "
-    };
+    ";
   };
 }
