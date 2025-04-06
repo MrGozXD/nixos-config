@@ -2,11 +2,12 @@
 {
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot = false;
+    powerOnBoot =true;
     package = pkgs.bluez5;
     settings.General = {
       Experimental = true;
       FastConnectable = true;
     };
   };
+  services.blueman.enable = true;
 }

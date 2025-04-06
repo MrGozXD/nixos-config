@@ -23,7 +23,7 @@
           "cpu"
           "backlight"
           "battery"
-          
+          "bluetooth"
           
           "tray"
         ];
@@ -36,6 +36,11 @@
           format-fr = "FR";
           min-length = 5;
           tooltip = false;
+        };
+
+        "bluetooth" = {
+          format = "{icon} ";
+          format-connected = "{icon} ";
         };
 
         "keyboard-state" = {
