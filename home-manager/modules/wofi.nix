@@ -10,6 +10,18 @@
       show_all = false;
       print_command = true;
       insensitive = true;
+      allow-images = true;
+    };
+    style = {
+    "
+     * {
+        background-color: #201A41;
+        border-radius: 15px;
+        font-family: JetBrains Mono;
+        font-weight: bold;
+        min-height: 20px;
+      }
+    "
     };
   };
 }

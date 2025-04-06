@@ -26,6 +26,16 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+
+    nvf = {
+      url = "github:notashelf/nvf";
+      # You can override the input nixpkgs to follow your system's
+      # instance of nixpkgs. This is safe to do as nvf does not depend
+      # on a binary cache.
+      inputs.nixpkgs.follows = "nixpkgs";
+      # Optionally, you can also override individual plugins
+      # for example:
+      #inputs.obsidian-nvim.follows = "obsidian-nvim"; # <- this will use the obsidian-nvim from your inputs
     };
   };
 
@@ -38,6 +48,7 @@
       stylix,
       catppuccin,
       spicetify-nix,
+      nvf,
       ...
     }@inputs:
 
@@ -58,6 +69,7 @@
         modules = [
           ./nixos/configuration.nix
           catppuccin.nixosModules.catppuccin
+          nvf.nixosModules.default 
           #stylix.nixosModules.stylix
           #inputs.nixvim.nixosModules.nixvim
           # if you use home-manager
