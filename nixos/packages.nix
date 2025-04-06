@@ -70,6 +70,7 @@
     # editor
     vscode.fhs
     obsidian
+    texmaker
 
     # Wayland stuff
     xwayland # provides compatibility for native X11 applications
