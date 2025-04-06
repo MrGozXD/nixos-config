@@ -1,10 +1,9 @@
 {pkgs, lib, ...}:
-  {
-    programs.nvf = {
+{
+  programs.nvf = {
     enable = true;
     settings = {
-      vim = {
-        
+      vim = {  
         statusline = {
           enable = true;
         };
@@ -19,8 +18,8 @@
           enableTreesitter = true;
           nix.enable = true;
           ts.enable = true;
-          
-        }
-    }
-  }
+        };
+      };
+    };
+  };
 }
