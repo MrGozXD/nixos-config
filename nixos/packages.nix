@@ -39,6 +39,7 @@
     # dev
     nodejs_20
     bun
+    astro-language-server
     chuck
     miniaudicle
     php
