@@ -63,6 +63,9 @@
     ffmpeg-full
     swww
 
+    #pulseAudio Volume Control
+    pavucontrol
+
     # CLI utils
     neofetch
     #zsh-powerlevel10k
