@@ -37,7 +37,7 @@
     # '')
 
     # dev
-    nodejs_20
+    nodePackages_latest.nodejs
     bun
     astro-language-server
     chuck
