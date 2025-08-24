@@ -37,7 +37,7 @@
     # '')
 
     # dev
-    nodePackages_latest.nodejs
+    nvm
     bun
     astro-language-server
     chuck
