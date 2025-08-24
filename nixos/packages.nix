@@ -37,7 +37,7 @@
     # '')
 
     # dev
-    nodejs_22
+    nodejs_20
     bun
     astro-language-server
     chuck
