@@ -43,6 +43,7 @@
     chuck
     miniaudicle
     php
+    docker-client
 
     #lsp
     nil
