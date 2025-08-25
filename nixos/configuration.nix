@@ -18,6 +18,8 @@
 
   environment.localBinInPath = true; # Add ~/.local/bin to PATH
 
+  virtualisation.docker.enable = true; # Enable Docker
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
