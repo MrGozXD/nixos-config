@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = "${toString ./../../../assets/wallpapers/GigantamaxEctoplasma.png}";
+    image = ./../../../assets/wallpapers/GigantamaxEctoplasma.png;
     polarity = "dark";
     opacity = {
       desktop = 0.5;

@@ -67,7 +67,7 @@ in
         };
       };
       general = {
-        avatarImage = "${toString ./../../../assets/wallpapers/GigantamaxEctoplasma.png}";
+        avatarImage = ./../../../assets/wallpapers/GigantamaxEctoplasma.png;
         radiusRatio = 0;
         boxRadiusRatio = 0;
         iRadiusRatio = 0;
@@ -82,7 +82,7 @@ in
       };
       wallpaper = {
         enabled = true;
-        directory = "${toString ./../../../assets/wallpapers}";
+        directory = ./../../../assets/wallpapers;
       };
       location = {
         monthBeforeDay = true;
