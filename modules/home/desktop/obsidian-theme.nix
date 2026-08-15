@@ -275,5 +275,5 @@ let
   '';
 in
 {
-  home.file."Obsidian Vault/.obsidian/themes/Night Purple".source = themeDir;
+  home.file."Goz Vault/.obsidian/themes/Night Purple".source = themeDir;
 }
