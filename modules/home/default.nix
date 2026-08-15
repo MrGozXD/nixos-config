@@ -1,0 +1,18 @@
+{
+  imports = [
+    ./core/shell/zsh.nix
+    ./core/shell/zoxide.nix
+    ./core/git.nix
+    ./core/style.nix
+    ./core/vscode-theme.nix
+    ./desktop/hyprland.nix
+    ./desktop/niri.nix
+    ./desktop/noctalia.nix
+    ./desktop/wofi.nix
+    ./desktop/vencord-theme.nix
+    ./desktop/obsidian-theme.nix
+    ./desktop/vivaldi-theme.nix
+    ./desktop/spicetify.nix
+    ./terminals/kitty.nix
+  ];
+}

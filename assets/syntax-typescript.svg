@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="416" viewBox="0 0 740 416">
+<rect width="740" height="416" rx="8" fill="#0F1117"/>
+<rect width="740" height="36" rx="8" fill="#161822"/>
+<rect y="28" width="740" height="8" fill="#161822"/>
+<circle cx="18" cy="18" r="6" fill="#F7768E"/>
+<circle cx="36" cy="18" r="6" fill="#E0AF68"/>
+<circle cx="54" cy="18" r="6" fill="#9ECE6A"/>
+<text x="370" y="22" fill="#7982A9" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">example.ts — Night Purple</text>
+<rect y="36" width="740" height="32" fill="#0F1117"/>
+<rect x="0" y="36" width="160" height="32" fill="#0F1117"/>
+<rect x="0" y="36" width="160" height="2" fill="#B24EFF"/>
+<text x="12" y="57" fill="#C0CAF5" font-family="system-ui, -apple-system, sans-serif" font-size="12">example.ts</text>
+<rect x="160" y="36" width="160" height="32" fill="#0F1117"/>
+<line x1="160" y1="42" x2="160" y2="62" stroke="#3B4261" stroke-width="1"/>
+<text x="172" y="57" fill="#3B4261" font-family="system-ui, -apple-system, sans-serif" font-size="12">other-file</text>
+<line x1="0" y1="68" x2="740" y2="68" stroke="#161822" stroke-width="1"/>
+<rect y="68" width="740" height="22" fill="#0F1117"/>
+<text x="64" y="83" fill="#3B4261" font-family="system-ui, -apple-system, sans-serif" font-size="11">src &gt; example.ts</text>
+<line x1="0" y1="90" x2="740" y2="90" stroke="#161822" stroke-width="1"/>
+<rect x="0" y="90" width="52" height="302" fill="#0F1117"/>
+<rect x="676" y="90" width="64" height="302" fill="#0F1117"/>
+<rect x="730" y="90" width="10" height="60" rx="2" fill="#3B4261" opacity="0.3"/>
+<rect x="680" y="94" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="98" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="106" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="110" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="114" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="118" width="31" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="126" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="130" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="134" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="138" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="142" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<text x="44" y="107" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">1</text>
+<text x="64" y="107" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#3B4261">// Fetch user data and greet</tspan></text>
+<text x="44" y="129" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">2</text>
+<text x="64" y="129" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#B24EFF">import</tspan><tspan fill="#A9B1D6"> { </tspan><tspan fill="#7DCFFF">useState</tspan><tspan fill="#A9B1D6"> } </tspan><tspan fill="#B24EFF">from</tspan><tspan fill="#9ECE6A"> &quot;react&quot;</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="151" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">3</text>
+<text x="64" y="151" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"></text>
+<text x="44" y="173" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">4</text>
+<text x="64" y="173" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#B24EFF">interface</tspan> <tspan fill="#E0AF68">User</tspan><tspan fill="#A9B1D6"> {</tspan></text>
+<text x="44" y="195" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">5</text>
+<text x="64" y="195" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">  <tspan fill="#A9B1D6">name</tspan><tspan fill="#A9B1D6">: </tspan><tspan fill="#E0AF68">string</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="217" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">6</text>
+<text x="64" y="217" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">  <tspan fill="#A9B1D6">age</tspan><tspan fill="#A9B1D6">: </tspan><tspan fill="#E0AF68">number</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="239" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">7</text>
+<text x="64" y="239" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#A9B1D6">}</tspan></text>
+<text x="44" y="261" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">8</text>
+<text x="64" y="261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"></text>
+<rect x="0" y="267" width="676" height="22" fill="#1E2030"/>
+<text x="44" y="283" fill="#C0CAF5" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">9</text>
+<text x="64" y="283" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#B24EFF">const</tspan> <tspan fill="#7DCFFF">greet</tspan><tspan fill="#7DCFFF"> = </tspan><tspan fill="#A9B1D6">(</tspan><tspan fill="#DB7093">user</tspan><tspan fill="#A9B1D6">: </tspan><tspan fill="#E0AF68">User</tspan><tspan fill="#A9B1D6">)</tspan><tspan fill="#A9B1D6">: </tspan><tspan fill="#E0AF68">string</tspan><tspan fill="#7DCFFF"> =&gt;</tspan><tspan fill="#A9B1D6"> {</tspan></text>
+<text x="44" y="305" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">10</text>
+<text x="64" y="305" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">  <tspan fill="#B24EFF">const</tspan> <tspan fill="#A9B1D6">message</tspan><tspan fill="#7DCFFF"> = </tspan><tspan fill="#9ECE6A">`Hello, ${</tspan><tspan fill="#A9B1D6">user</tspan><tspan fill="#A9B1D6">.</tspan><tspan fill="#A9B1D6">name</tspan><tspan fill="#9ECE6A">}`</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="327" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">11</text>
+<text x="64" y="327" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">  <tspan fill="#A9B1D6">console</tspan><tspan fill="#A9B1D6">.</tspan><tspan fill="#7DCFFF">log</tspan><tspan fill="#A9B1D6">(</tspan><tspan fill="#A9B1D6">message</tspan><tspan fill="#A9B1D6">)</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="349" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">12</text>
+<text x="64" y="349" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">  <tspan fill="#B24EFF">return</tspan> <tspan fill="#A9B1D6">message</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="371" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">13</text>
+<text x="64" y="371" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#A9B1D6">}</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<rect y="392" width="740" height="24" fill="#161822"/>
+<rect y="392" width="740" height="24" rx="0" fill="#161822"/>
+<rect x="0" y="408" width="740" height="8" rx="8" fill="#161822"/>
+<rect x="0" y="400" width="740" height="8" fill="#161822"/>
+<rect x="0" y="392" width="90" height="24" fill="#B24EFF"/>
+<text x="45" y="408" fill="#C0CAF5" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">NixOS</text>
+<text x="724" y="408" fill="#7982A9" font-family="system-ui, sans-serif" font-size="11" text-anchor="end">TypeScript   UTF-8   LF</text>
+<text x="110" y="408" fill="#7982A9" font-family="system-ui, sans-serif" font-size="11">main</text>
+</svg>

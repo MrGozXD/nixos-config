@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="460" viewBox="0 0 740 460">
+<rect width="740" height="460" rx="8" fill="#0F1117"/>
+<rect width="740" height="36" rx="8" fill="#161822"/>
+<rect y="28" width="740" height="8" fill="#161822"/>
+<circle cx="18" cy="18" r="6" fill="#F7768E"/>
+<circle cx="36" cy="18" r="6" fill="#E0AF68"/>
+<circle cx="54" cy="18" r="6" fill="#9ECE6A"/>
+<text x="370" y="22" fill="#7982A9" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">example.rs — Night Purple</text>
+<rect y="36" width="740" height="32" fill="#0F1117"/>
+<rect x="0" y="36" width="160" height="32" fill="#0F1117"/>
+<rect x="0" y="36" width="160" height="2" fill="#B24EFF"/>
+<text x="12" y="57" fill="#C0CAF5" font-family="system-ui, -apple-system, sans-serif" font-size="12">example.rs</text>
+<rect x="160" y="36" width="160" height="32" fill="#0F1117"/>
+<line x1="160" y1="42" x2="160" y2="62" stroke="#3B4261" stroke-width="1"/>
+<text x="172" y="57" fill="#3B4261" font-family="system-ui, -apple-system, sans-serif" font-size="12">other-file</text>
+<line x1="0" y1="68" x2="740" y2="68" stroke="#161822" stroke-width="1"/>
+<rect y="68" width="740" height="22" fill="#0F1117"/>
+<text x="64" y="83" fill="#3B4261" font-family="system-ui, -apple-system, sans-serif" font-size="11">src &gt; example.rs</text>
+<line x1="0" y1="90" x2="740" y2="90" stroke="#161822" stroke-width="1"/>
+<rect x="0" y="90" width="52" height="346" fill="#0F1117"/>
+<rect x="676" y="90" width="64" height="346" fill="#0F1117"/>
+<rect x="730" y="90" width="10" height="60" rx="2" fill="#3B4261" opacity="0.3"/>
+<rect x="680" y="94" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="98" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="106" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="110" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="114" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="118" width="31" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="126" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="130" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="134" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="138" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="142" width="40" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="146" width="35" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<rect x="680" y="150" width="31" height="2" rx="1" fill="#A9B1D6" opacity="0.15"/>
+<text x="44" y="107" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">1</text>
+<text x="64" y="107" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#3B4261">// HTTP server implementation</tspan></text>
+<text x="44" y="129" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">2</text>
+<text x="64" y="129" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#B24EFF">use</tspan> <tspan fill="#A9B1D6">std</tspan><tspan fill="#A9B1D6">::</tspan><tspan fill="#A9B1D6">collections</tspan><tspan fill="#A9B1D6">::</tspan><tspan fill="#E0AF68">HashMap</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="151" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">3</text>
+<text x="64" y="151" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"></text>
+<text x="44" y="173" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">4</text>
+<text x="64" y="173" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#B24EFF">struct</tspan> <tspan fill="#E0AF68">Server</tspan><tspan fill="#A9B1D6"> {</tspan></text>
+<text x="44" y="195" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">5</text>
+<text x="64" y="195" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">    <tspan fill="#A9B1D6">host</tspan><tspan fill="#A9B1D6">: </tspan><tspan fill="#E0AF68">String</tspan><tspan fill="#A9B1D6">,</tspan></text>
+<text x="44" y="217" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">6</text>
+<text x="64" y="217" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">    <tspan fill="#A9B1D6">port</tspan><tspan fill="#A9B1D6">: </tspan><tspan fill="#E0AF68">u16</tspan><tspan fill="#A9B1D6">,</tspan></text>
+<text x="44" y="239" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">7</text>
+<text x="64" y="239" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#A9B1D6">}</tspan></text>
+<text x="44" y="261" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">8</text>
+<text x="64" y="261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"></text>
+<text x="44" y="283" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">9</text>
+<text x="64" y="283" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#B24EFF">impl</tspan> <tspan fill="#E0AF68">Server</tspan><tspan fill="#A9B1D6"> {</tspan></text>
+<rect x="0" y="289" width="676" height="22" fill="#1E2030"/>
+<text x="44" y="305" fill="#C0CAF5" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">10</text>
+<text x="64" y="305" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">    <tspan fill="#B24EFF">fn</tspan> <tspan fill="#7DCFFF">start</tspan><tspan fill="#A9B1D6">(</tspan><tspan fill="#DB7093">&amp;amp;self</tspan><tspan fill="#A9B1D6">) -&gt; </tspan><tspan fill="#E0AF68">Result</tspan><tspan fill="#A9B1D6">&amp;lt;(), </tspan><tspan fill="#E0AF68">Error</tspan><tspan fill="#A9B1D6">&amp;gt; {</tspan></text>
+<text x="44" y="327" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">11</text>
+<text x="64" y="327" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">        <tspan fill="#B24EFF">let</tspan> <tspan fill="#A9B1D6">addr</tspan><tspan fill="#7DCFFF"> = </tspan><tspan fill="#7DCFFF">format!</tspan><tspan fill="#A9B1D6">(</tspan><tspan fill="#9ECE6A">&quot;{}:{}&quot;</tspan><tspan fill="#A9B1D6">, </tspan><tspan fill="#DB7093">self</tspan><tspan fill="#A9B1D6">.</tspan><tspan fill="#A9B1D6">host</tspan><tspan fill="#A9B1D6">, </tspan><tspan fill="#DB7093">self</tspan><tspan fill="#A9B1D6">.</tspan><tspan fill="#A9B1D6">port</tspan><tspan fill="#A9B1D6">)</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="349" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">12</text>
+<text x="64" y="349" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">        <tspan fill="#7DCFFF">println!</tspan><tspan fill="#A9B1D6">(</tspan><tspan fill="#9ECE6A">&quot;Listening on {addr}&quot;</tspan><tspan fill="#A9B1D6">)</tspan><tspan fill="#A9B1D6">;</tspan></text>
+<text x="44" y="371" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">13</text>
+<text x="64" y="371" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">        <tspan fill="#7DCFFF">Ok</tspan><tspan fill="#A9B1D6">(())</tspan></text>
+<text x="44" y="393" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">14</text>
+<text x="64" y="393" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve">    <tspan fill="#A9B1D6">}</tspan></text>
+<text x="44" y="415" fill="#3B4261" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" text-anchor="end">15</text>
+<text x="64" y="415" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" xml:space="preserve"><tspan fill="#A9B1D6">}</tspan></text>
+<rect y="436" width="740" height="24" fill="#161822"/>
+<rect y="436" width="740" height="24" rx="0" fill="#161822"/>
+<rect x="0" y="452" width="740" height="8" rx="8" fill="#161822"/>
+<rect x="0" y="444" width="740" height="8" fill="#161822"/>
+<rect x="0" y="436" width="90" height="24" fill="#B24EFF"/>
+<text x="45" y="452" fill="#C0CAF5" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">NixOS</text>
+<text x="724" y="452" fill="#7982A9" font-family="system-ui, sans-serif" font-size="11" text-anchor="end">Rust   UTF-8   LF</text>
+<text x="110" y="452" fill="#7982A9" font-family="system-ui, sans-serif" font-size="11">main</text>
+</svg>
