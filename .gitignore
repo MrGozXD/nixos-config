@@ -1,0 +1,39 @@
+# Nix
+flake.lock
+/nix
+
+# Home Manager / NixOS generated
+result
+result-
+
+# Secrets (never commit sensitive data)
+secrets/
+*.age
+*.age.*
+*.gpg
+*.asc
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Nix build artifacts
+*.drv
+*.drv.attrs
+*.drv.attrs.json
+
+# Temporary/backup files
+*.nix.bak
+*.nix.old
+*.orig
+
+# Environment files
+.env
+.env.*
