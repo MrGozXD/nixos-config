@@ -1,4 +1,10 @@
-{ lib, pkgs, config, inputs, ... }:
+{
+  lib,
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 let
   colors = import ../../../lib/colors.nix;
 in
@@ -8,7 +14,7 @@ in
     inputs.noctalia.homeModules.default
   ];
 
-    # configure options
+  # configure options
   programs.noctalia-shell = {
     enable = true;
     settings = lib.mkForce {
@@ -61,7 +67,7 @@ in
         };
       };
       general = {
-        avatarImage = "${config.home.homeDirectory}/Pictures/Wallpaper/GigantamaxEctoplasma.png";
+        avatarImage = "${toString ./../../../assets/wallpapers/GigantamaxEctoplasma.png}";
         radiusRatio = 0;
         boxRadiusRatio = 0;
         iRadiusRatio = 0;
@@ -76,7 +82,7 @@ in
       };
       wallpaper = {
         enabled = true;
-        directory = "${config.home.homeDirectory}/Pictures/Wallpaper";
+        directory = "${toString ./../../../assets/wallpapers}";
       };
       location = {
         monthBeforeDay = true;

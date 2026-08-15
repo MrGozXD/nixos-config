@@ -99,7 +99,7 @@ in
 
       exec-once = [
         "swww init"
-        "swww img ${config.home.homeDirectory}/Pictures/Wallpaper/GigantamaxEctoplasma.png"
+        "swww img ${toString ./../../../assets/wallpapers/GigantamaxEctoplasma.png}"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
