@@ -40,14 +40,22 @@
   };
 
   outputs =
-    { nixpkgs, nixpkgs-stable, home-manager, stylix, catppuccin, nvf, ... }@inputs:
+    {
+      nixpkgs,
+      nixpkgs-stable,
+      home-manager,
+      stylix,
+      catppuccin,
+      nvf,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       colors = import ./lib/colors.nix;
     in
     {
-      nixosConfigurations.mrgozxd = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {
           pkgs-stable = import nixpkgs-stable {
             inherit system;
@@ -63,11 +71,42 @@
         ];
       };
 
-      homeConfigurations.mrgozxd = home-manager.lib.homeManagerConfiguration {
+      nixosConfigurations.asus = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          pkgs-stable = import nixpkgs-stable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs system;
+          inherit colors;
+        };
+        modules = [
+          ./hosts/asus
+          catppuccin.nixosModules.catppuccin
+          nvf.nixosModules.default
+        ];
+      };
+
+      homeConfigurations.laptop = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
           inherit inputs system;
           inherit colors;
+          hostName = "laptop";
+        };
+        modules = [
+          stylix.homeModules.stylix
+          ./home/mrgozxd/home.nix
+          catppuccin.homeModules.catppuccin
+        ];
+      };
+
+      homeConfigurations.asus = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = {
+          inherit inputs system;
+          inherit colors;
+          hostName = "asus";
         };
         modules = [
           stylix.homeModules.stylix

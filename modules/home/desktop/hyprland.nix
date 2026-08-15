@@ -1,4 +1,22 @@
-{ config, colors, ... }:
+{
+  config,
+  colors,
+  hostName ? "laptop",
+  ...
+}:
+let
+  monitors =
+    if hostName == "asus" then
+      [
+        ",preferred,auto,1"
+        "HDMI-A-1,1920x1080@60,-1920x0,1"
+      ]
+    else
+      [
+        "eDP-1,1920x1080@144.00,0x0,1"
+        "HDMI-A-1,1920x1080@60.00,-1920x0,1"
+      ];
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -7,10 +25,7 @@
     settings = {
       "$mainMod" = "SUPER";
 
-      monitor = [
-        "eDP-1,1920x1080@144.00,0x0,1"
-        "HDMI-A-1,1920x1080@60.00,-1920x0,1"
-      ];
+      monitor = monitors;
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -84,7 +99,7 @@
 
       exec-once = [
         "swww init"
-        "swww img ${config.home.homeDirectory}/Images/Wallpaper/GigantamaxEctoplasma.png"
+        "swww img ${config.home.homeDirectory}/Pictures/Wallpaper/GigantamaxEctoplasma.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"

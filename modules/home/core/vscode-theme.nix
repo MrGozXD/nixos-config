@@ -163,31 +163,61 @@ let
     };
     tokenColors = [
       {
-        scope = [ "comment" "punctuation.definition.comment" ];
-        settings = { foreground = "#${colors.fg-muted}"; fontStyle = "italic"; };
+        scope = [
+          "comment"
+          "punctuation.definition.comment"
+        ];
+        settings = {
+          foreground = "#${colors.fg-muted}";
+          fontStyle = "italic";
+        };
       }
       {
-        scope = [ "string" "string.quoted" "string.template" ];
+        scope = [
+          "string"
+          "string.quoted"
+          "string.template"
+        ];
         settings.foreground = "#${colors.green}";
       }
       {
-        scope = [ "constant.numeric" "constant.language" "constant.character" ];
+        scope = [
+          "constant.numeric"
+          "constant.language"
+          "constant.character"
+        ];
         settings.foreground = "#${colors.orange}";
       }
       {
-        scope = [ "keyword" "keyword.control" "storage.type" "storage.modifier" ];
+        scope = [
+          "keyword"
+          "keyword.control"
+          "storage.type"
+          "storage.modifier"
+        ];
         settings.foreground = "#${colors.accent}";
       }
       {
-        scope = [ "entity.name.function" "support.function" ];
+        scope = [
+          "entity.name.function"
+          "support.function"
+        ];
         settings.foreground = "#${colors.cyan}";
       }
       {
-        scope = [ "entity.name.type" "entity.name.class" "support.type" "support.class" ];
+        scope = [
+          "entity.name.type"
+          "entity.name.class"
+          "support.type"
+          "support.class"
+        ];
         settings.foreground = "#${colors.yellow}";
       }
       {
-        scope = [ "variable" "variable.other" ];
+        scope = [
+          "variable"
+          "variable.other"
+        ];
         settings.foreground = "#${colors.fg}";
       }
       {
@@ -203,7 +233,10 @@ let
         settings.foreground = "#${colors.accent-soft}";
       }
       {
-        scope = [ "punctuation" "meta.brace" ];
+        scope = [
+          "punctuation"
+          "meta.brace"
+        ];
         settings.foreground = "#${colors.fg}";
       }
       {
@@ -212,7 +245,10 @@ let
       }
       {
         scope = [ "markup.heading" ];
-        settings = { foreground = "#${colors.accent}"; fontStyle = "bold"; };
+        settings = {
+          foreground = "#${colors.accent}";
+          fontStyle = "bold";
+        };
       }
       {
         scope = [ "markup.bold" ];
@@ -223,7 +259,10 @@ let
         settings.fontStyle = "italic";
       }
       {
-        scope = [ "markup.inline.raw" "markup.fenced_code" ];
+        scope = [
+          "markup.inline.raw"
+          "markup.fenced_code"
+        ];
         settings.foreground = "#${colors.green}";
       }
       {
@@ -239,7 +278,10 @@ let
         settings.foreground = "#${colors.orange}";
       }
       {
-        scope = [ "invalid" "invalid.illegal" ];
+        scope = [
+          "invalid"
+          "invalid.illegal"
+        ];
         settings.foreground = "#${colors.red}";
       }
     ];
@@ -270,5 +312,7 @@ let
   '';
 in
 {
-  home.file.".vscode/extensions/mrgozxd-night-purple-0.0.1".source = extensionDir;
+  # Use the conventional publisher.name-version folder format so VS Code
+  # reliably detects the extension (e.g. publisher.name-version).
+  home.file.".vscode/extensions/mrgozxd.night-purple-0.0.1".source = extensionDir;
 }

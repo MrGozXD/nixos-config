@@ -7,11 +7,13 @@
     syntaxHighlighting.enable = true;
     initContent = "fastfetch";
 
-    shellAliases = let flakeDir = "${config.home.homeDirectory}/nixos/.#mrgozxd"; in {
-      rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
+    shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname)";
+      rb = "rebuild";
+      upg = "sudo nixos-rebuild switch --upgrade --flake ~/nixos#$(hostname)";
       gc = "nix-collect-garbage -d";
-      hms = "home-manager switch --flake ${flakeDir}";
+      hm = "home-manager switch --flake ~/nixos#$(hostname)";
+      hms = "hm";
 
       ll = "ls -l";
       la = "ls -la";

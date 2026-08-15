@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = /home/mrgozxd/Images/Wallpaper/GigantamaxEctoplasma.png;
+    image = /home/mrgozxd/Pictures/Wallpaper/GigantamaxEctoplasma.png;
     polarity = "dark";
     opacity = {
       desktop = 0.5;

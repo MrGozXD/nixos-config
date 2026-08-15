@@ -5,6 +5,5 @@
     ../common.nix
     ../../pkgs
   ];
-
-  networking.hostName = "laptop";
+  networking.hostName = "asus";
 }

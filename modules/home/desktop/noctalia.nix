@@ -61,7 +61,7 @@ in
         };
       };
       general = {
-        avatarImage = "${config.home.homeDirectory}/Images/Wallpaper/GigantamaxEctoplasma.png";
+        avatarImage = "${config.home.homeDirectory}/Pictures/Wallpaper/GigantamaxEctoplasma.png";
         radiusRatio = 0;
         boxRadiusRatio = 0;
         iRadiusRatio = 0;
@@ -76,7 +76,7 @@ in
       };
       wallpaper = {
         enabled = true;
-        directory = "${config.home.homeDirectory}/Images/Wallpaper";
+        directory = "${config.home.homeDirectory}/Pictures/Wallpaper";
       };
       location = {
         monthBeforeDay = true;
