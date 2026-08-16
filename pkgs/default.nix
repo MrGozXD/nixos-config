@@ -72,5 +72,7 @@
 
     # Other
     home-manager
+    direnv
+    nix-direnv
   ];
 }

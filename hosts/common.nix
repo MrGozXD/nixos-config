@@ -36,5 +36,7 @@
   console.keyMap = "fr";
   services.printing.enable = true;
 
+  programs.direnv.enable = true;
+
   system.stateVersion = "23.11";
 }

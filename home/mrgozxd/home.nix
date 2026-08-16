@@ -11,6 +11,7 @@
     homeDirectory = "/home/mrgozxd";
     sessionPath = [
       "$HOME/.bun/bin"
+      "$HOME/nixos/dev"
     ];
     sessionVariables = {
       EDITOR = "code";

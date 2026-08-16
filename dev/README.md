@@ -18,7 +18,6 @@ nix develop ~/nixos#<name>
 |--------|-------------------------------------------|
 | `java` | JDK 21, Maven, Gradle                     |
 | `cpp`  | GCC, CMake, Make, GDB, clang-tools        |
-| `rust` | rustc, cargo, rustfmt, clippy, rust-analyzer |
 
 ## Using with VS Code
 
@@ -50,15 +49,34 @@ Alternatively, install the [Nix Environment Selector](https://marketplace.visual
 }
 ```
 
-2. Add it to the `shells` list in `dev/default.nix`:
+1. Add it to the `shells` list in `dev/default.nix`:
 
 ```nix
 shells = [
   ./java.nix
   ./cpp.nix
-  ./rust.nix
   ./python.nix
 ];
 ```
 
-3. Stage the file so the flake can see it: `git add dev/`
+1. Stage the file so the flake can see it: `git add dev/`
+
+## Quick Rust project scaffold
+
+- Create a new project using the included helper:
+
+```bash
+# from the repository root
+dev/new-rust-project.sh my-new-project
+```
+
+- This creates a `Cargo` project, copies a `flake.nix` that exposes `devShells.x86_64-linux.rust`, and adds a `.envrc` that activates that shell with `nix-direnv`.
+
+- If you have `direnv` and `nix-direnv` installed and enabled, run:
+
+```bash
+cd my-new-project
+direnv allow
+```
+
+The dev shell will then be activated automatically when you `cd` into the folder.
