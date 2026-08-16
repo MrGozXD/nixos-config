@@ -164,6 +164,10 @@
         Mod+WheelScrollUp        cooldown-ms=15 { focus-column-left; }
         Mod+Ctrl+WheelScrollDown cooldown-ms=15 { focus-workspace-down; }
         Mod+Ctrl+WheelScrollUp   cooldown-ms=15 { focus-workspace-up; }
+        Mod+TouchpadScrollDown      cooldown-ms=15 { focus-column-right; }
+        Mod+TouchpadScrollUp        cooldown-ms=15 { focus-column-left; }
+        Mod+Ctrl+TouchpadScrollDown cooldown-ms=15 { focus-workspace-down; }
+        Mod+Ctrl+TouchpadScrollUp   cooldown-ms=15 { focus-workspace-up; }
 
         Mod+L { spawn "loginctl" "lock-session"; }
         Mod+Shift+E { quit; }
