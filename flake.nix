@@ -37,6 +37,12 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
     };
+
+    # Zed editor flake (official)
+    zed = {
+      url = "github:zed-industries/zed";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

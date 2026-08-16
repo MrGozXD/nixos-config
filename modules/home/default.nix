@@ -14,5 +14,7 @@
     ./desktop/vivaldi-theme.nix
     ./desktop/spicetify.nix
     ./terminals/kitty.nix
+    ./programs/zed.nix
+    ./programs/zed-theme.nix
   ];
 }
