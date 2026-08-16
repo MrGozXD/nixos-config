@@ -35,7 +35,6 @@
       vim_mode = false;
       theme = {
         mode = "dark";
-        dark = "Night Purple";
       };
     };
   };
