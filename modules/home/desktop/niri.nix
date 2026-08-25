@@ -47,6 +47,8 @@
 
     // Autostart
     spawn-at-startup "noctalia-shell"
+    // Engage Noctalia's lock screen right after login (boot / logout)
+    spawn-at-startup "sh" "-c" "sleep 2; for i in $(seq 1 10); do noctalia-shell ipc call lockScreen lock >/dev/null 2>&1 && break; sleep 1; done"
     spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
     spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 

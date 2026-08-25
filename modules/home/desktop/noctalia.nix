@@ -74,6 +74,11 @@ in
         enableShadows = false;
         lockOnSuspend = true;
         compactLockScreen = false;
+
+        # Lock screen style — blurred wallpaper with dark tint
+        lockScreenBlur = 0.6;
+        lockScreenTint = 0.35;
+        lockScreenAnimations = true;
       };
       ui = {
         boxBorderEnabled = true;

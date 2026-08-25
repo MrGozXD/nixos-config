@@ -21,6 +21,7 @@
     pkgs-stable.miniaudicle
     php
     docker-client
+    opencode
 
     # LSP
     nil
