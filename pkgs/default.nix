@@ -25,7 +25,7 @@
 
     # LSP
     nil
-    nixfmt-rfc-style
+    nixfmt
 
     # Python
     python3

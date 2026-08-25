@@ -46,6 +46,7 @@ in
         follow_mouse = 1;
         touchpad.natural_scroll = true;
         sensitivity = 0;
+        numlock_by_default = true;
       };
 
       general = {

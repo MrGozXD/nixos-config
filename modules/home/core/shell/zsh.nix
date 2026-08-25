@@ -5,7 +5,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    initContent = "fastfetch";
+    initContent = "pokefetch";
 
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname)";
