@@ -5,7 +5,6 @@
     ./core/git.nix
     ./core/style.nix
     ./core/vscode-theme.nix
-    ./desktop/hyprland.nix
     ./desktop/niri.nix
     ./desktop/noctalia.nix
     ./desktop/wofi.nix

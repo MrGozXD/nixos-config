@@ -14,8 +14,11 @@ nixos/
 │   ├── laptop/
 │   │   ├── default.nix              # Laptop host (imports common + pkgs)
 │   │   └── hardware-configuration.nix
+│   ├── asus/
+│   │   ├── default.nix              # Asus host (imports common + pkgs)
+│   │   └── hardware-configuration.nix
 │   └── desktop/
-│       ├── default.nix              # Desktop host (placeholder)
+│       ├── default.nix              # Desktop host (placeholder, not wired into flake)
 │       └── hardware-configuration.nix
 │
 ├── modules/
@@ -28,9 +31,9 @@ nixos/
 │   │   │   ├── sound.nix
 │   │   │   └── users.nix
 │   │   ├── desktop/
-│   │   │   ├── hyprland.nix         # Hyprland compositor (NixOS-level)
+│   │   │   ├── niri.nix             # Niri compositor (NixOS-level)
 │   │   │   ├── xserver.nix
-│   │   │   └── display-manager.nix
+│   │   │   └── display-manager.nix  # GDM + autologin, boots straight into niri
 │   │   └── programs/
 │   │       └── neovim.nix           # NVF-based Neovim config
 │   │
@@ -39,73 +42,83 @@ nixos/
 │       ├── core/
 │       │   ├── git.nix
 │       │   ├── style.nix            # Stylix theming
+│       │   ├── vscode-theme.nix
 │       │   └── shell/
-│       │       ├── zsh.nix
+│       │       ├── zsh.nix          # Zsh + pokefetch greeting
 │       │       └── zoxide.nix
 │       ├── desktop/
-│       │   ├── hyprland.nix         # Hyprland keybinds & settings
-│       │   ├── waybar.nix
+│       │   ├── niri.nix             # Niri keybinds & settings
+│       │   ├── noctalia.nix         # Noctalia shell desktop
 │       │   ├── wofi.nix
-│       │   ├── rofi.nix
-│       │   └── spicetify.nix
+│       │   ├── spicetify.nix
+│       │   ├── vencord-theme.nix
+│       │   ├── obsidian-theme.nix
+│       │   └── vivaldi-theme.nix
+│       ├── programs/
+│       │   ├── zed.nix
+│       │   └── zed-theme.nix
 │       └── terminals/
-│           ├── kitty.nix
-│           └── alacritty.nix
+│           └── kitty.nix
 │
 ├── home/
 │   └── mrgozxd/
 │       └── home.nix                 # User-level Home Manager entry point
+│                                    # + ~/.local/bin scripts (pokefetch, new-rust-project)
 │
 ├── pkgs/
 │   └── default.nix                  # System packages & fonts
 │
-├── overlays/
-│   └── default.nix
-│
 ├── lib/
-│   ├── default.nix
-│   └── colors.nix                  # Centralized color palette
+│   └── colors.nix                   # Centralized color palette
 │
-└── secrets/                         # Secrets (agenix/sops)
+├── assets/
+│   └── wallpapers/
+│
+└── dev/                             # Dev shells (cpp, java, rust templates)
 ```
 
 ## How It Works
 
-The configuration is split into two independent outputs defined in `flake.nix`:
+The configuration is split into two independent sets of outputs defined in `flake.nix`, one per host (`laptop`, `asus`):
 
-- **`nixosConfigurations.mrgozxd`** — System-level config built with `nixpkgs.lib.nixosSystem`. The entry point is `hosts/laptop/default.nix`, which imports `hosts/common.nix` (shared settings) and `pkgs/` (system packages). Common then pulls in all modules under `modules/nixos/`.
+- **`nixosConfigurations.<host>`** — System-level config built with `nixpkgs.lib.nixosSystem`. Entry point: `hosts/<host>/default.nix` → imports `hosts/common.nix` (shared settings) and `pkgs/` (system packages). Common pulls in all modules under `modules/nixos/`. (A third host, `desktop`, exists under `hosts/` but is not yet wired into the flake.)
 
-- **`homeConfigurations.mrgozxd`** — User-level config built with `home-manager.lib.homeManagerConfiguration` (standalone, not a NixOS module). The entry point is `home/mrgozxd/home.nix`, which imports all modules under `modules/home/`.
+- **`homeConfigurations.<host>`** — User-level config built with `home-manager.lib.homeManagerConfiguration` (standalone, not a NixOS module). Entry point: `home/mrgozxd/home.nix`, which imports all modules under `modules/home/`.
+
+Modules receive `{ inputs, system, colors }` via `specialArgs` (NixOS) and `{ inputs, system, colors, hostName }` via `extraSpecialArgs` (Home Manager).
 
 ### Flake Inputs
 
 | Input | Purpose |
 |---|---|
 | `nixpkgs` (unstable) | Main package set |
-| `nixpkgs-stable` | Stable packages when needed |
 | `home-manager` | Dotfile & user config management |
-| `hyprland` | Wayland compositor |
 | `stylix` | System-wide theming |
 | `catppuccin` | Catppuccin color scheme |
 | `spicetify-nix` | Spotify customization |
 | `nvf` | Neovim configuration framework |
 | `noctalia` | Noctalia shell |
+| `zed` | Zed editor (official flake) |
 
 ## Usage
 
 ```bash
 # Rebuild NixOS system
-sudo nixos-rebuild switch --flake .#mrgozxd
+sudo nixos-rebuild switch --flake ~/nixos#laptop
+sudo nixos-rebuild switch --flake ~/nixos#asus
 
 # Rebuild Home Manager
-home-manager switch --flake .#mrgozxd
+home-manager switch --flake ~/nixos#laptop
+home-manager switch --flake ~/nixos#asus
+
+# Or with the zsh aliases (from any directory, hostname auto-detected)
+rebuild    # system
+hm         # home manager
+upg        # system + upgrade inputs
+gc         # garbage collect
 
 # Update all flake inputs
 nix flake update
-
-# Add a new host
-# 1. Create hosts/<name>/default.nix and hardware-configuration.nix
-# 2. Add a new nixosConfigurations.<name> entry in flake.nix
 ```
 
 ## Adding a Module
@@ -115,7 +128,7 @@ nix flake update
 
 ## Color Palette — Night Purple
 
-All colors are defined in a single file — [`lib/colors.nix`](lib/colors.nix) — and passed to every module via `specialArgs`. This means changing one value updates Stylix, Hyprland, Niri, Waybar, Wofi, Rofi, and VS Code at once.
+All colors are defined in a single file — [`lib/colors.nix`](lib/colors.nix) — and passed to every module via `specialArgs`. This means changing one value updates Stylix, Niri, Wofi, VS Code, and Zed at once.
 
 ### Palette
 
@@ -145,7 +158,7 @@ Every module receives `colors` via `specialArgs`. Reference any color with strin
 { colors, ... }:
 {
   # Use semantic names
-  "col.active_border" = "rgba(''${colors.accent}FF)";
+  active-color = "#${colors.accent}";
 
   # Or base16 keys (for Stylix compatibility)
   base16Scheme = {

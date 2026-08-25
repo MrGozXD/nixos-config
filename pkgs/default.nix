@@ -1,4 +1,4 @@
-{ pkgs, pkgs-stable, ... }:
+{ pkgs, ... }:
 {
   nixpkgs.config = {
     allowUnfree = true;
@@ -17,8 +17,6 @@
     nodejs_20
     bun
     astro-language-server
-    chuck
-    pkgs-stable.miniaudicle
     php
     docker-client
     opencode
@@ -39,14 +37,10 @@
     unzip
     unar
     ffmpeg-full
-    swww
     pavucontrol
 
     # CLI
     fastfetch
-    base16-shell-preview
-    base16-schemes
-    argyllcms
 
     # Apps
     spotify
@@ -57,7 +51,6 @@
     # Editors
     vscode.fhs
     obsidian
-    texmaker
 
     # Wayland
     xwayland

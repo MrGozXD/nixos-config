@@ -1,4 +1,4 @@
-{ inputs, colors, ... }:
+{ colors, ... }:
 {
   stylix = {
     enable = true;
@@ -29,10 +29,8 @@
         base0F
         ;
     };
-    targets.hyprland.enable = false;
     targets.gtk.enable = true;
     targets.kitty.enable = true;
-    targets.alacritty.enable = true;
     autoEnable = true;
   };
 
