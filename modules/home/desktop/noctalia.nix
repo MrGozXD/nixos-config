@@ -81,6 +81,8 @@ in
         lockScreenAnimations = true;
       };
       ui = {
+        fontDefault = "MesloLGS NF";
+        fontFixed = "MesloLGS NF";
         boxBorderEnabled = true;
         panelBackgroundOpacity = 1.0;
         panelsAttachedToBar = true;

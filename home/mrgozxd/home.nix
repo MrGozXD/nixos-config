@@ -4,7 +4,7 @@
     ../../modules/home
   ];
 
-  home.packages = with pkgs; [ pokeget-rs ];
+  home.packages = with pkgs; [ github-cli pokeget-rs ];
 
   home = {
     username = "mrgozxd";

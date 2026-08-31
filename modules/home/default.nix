@@ -14,6 +14,7 @@
     ./desktop/spicetify.nix
     ./terminals/kitty.nix
     ./programs/zed.nix
+    ./programs/yazi.nix
     ./programs/zed-theme.nix
   ];
 }
