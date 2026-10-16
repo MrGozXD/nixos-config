@@ -75,6 +75,21 @@ nixos/
 │   └── wallpapers/
 │
 └── dev/                             # Dev shells (cpp, java, rust templates)
+
+## Nix-darwin Configuration (MacBook)
+
+This repository also includes a nix-darwin configuration for macOS in the `nix-darwin/` directory. It contains terminal-only configurations:
+
+- **Kitty** terminal emulator
+- **Zsh** with Oh My Zsh, autosuggestions, syntax highlighting
+- **Zoxide** for smart directory jumping
+- **Yazi** file manager
+- **Git** with GitHub integration
+- **Pokefetch** greeting
+- All CLI tools from your NixOS config (node, bun, python, etc.)
+
+See [`nix-darwin/README.md`](nix-darwin/README.md) for setup instructions.
+
 ```
 
 ## How It Works
